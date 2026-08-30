@@ -119,18 +119,19 @@ img { max-width: 100%; display: block; }
   font-weight: 500;
 }
 
-.nav-links a:hover { color: var(--gold); }
+.nav-links a:hover { color: var(--navy); }
 
 .nav-cta {
-  background: var(--gold);
+  background: transparent;
   color: var(--navy) !important;
-  padding: 9px 18px;
+  border: 1.5px solid rgba(20,33,61,0.35);
+  padding: 7.5px 17px;
   border-radius: 999px;
   font-weight: 600;
   font-size: 0.9rem !important;
 }
 
-.nav-cta:hover { background: var(--gold-light); color: var(--navy) !important; }
+.nav-cta:hover { background: var(--navy); border-color: var(--navy); color: var(--cream) !important; }
 
 .nav-toggle {
   display: none;
