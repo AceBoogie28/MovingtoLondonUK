@@ -491,19 +491,19 @@ section { padding: 72px 0; }
 /* ---------- Content / guide pages ---------- */
 
 .page-hero {
-  background: var(--navy);
-  color: #fff;
+  background: var(--cream);
+  border-bottom: 1px solid var(--border);
   padding: 56px 0;
 }
-.page-hero h1 { color: #fff; margin-bottom: 10px; }
-.page-hero p { color: #cfd4e0; max-width: 60ch; margin-bottom: 0; }
+.page-hero h1 { margin-bottom: 10px; }
+.page-hero p { color: var(--slate); max-width: 60ch; margin-bottom: 0; }
 
 .breadcrumb {
   font-size: 0.85rem;
-  color: #a9b0c2;
+  color: var(--slate);
   margin-bottom: 16px;
 }
-.breadcrumb a { color: #cfd4e0; }
+.breadcrumb a { color: var(--slate); text-decoration: underline; }
 
 .prose {
   max-width: 74ch;
@@ -619,6 +619,101 @@ section { padding: 72px 0; }
   font-weight: 600;
   color: var(--navy);
 }
+
+/* ---------- Neighborhood page template: housing stock, price band, honest take ---------- */
+
+.n-section-label {
+  font-family: "Fraunces", serif;
+  font-weight: 600;
+  font-size: 1.25rem;
+  color: var(--navy);
+  margin: 36px 0 8px;
+}
+.n-section-label:first-child { margin-top: 0; }
+
+.n-housing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin: 16px 0 8px;
+}
+.n-house-card {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px 16px 18px;
+}
+.n-house-card h4 { font-size: 0.95rem; margin-bottom: 6px; }
+.n-house-card p { font-size: 0.85rem; color: var(--slate); margin-bottom: 0; }
+
+.n-pills { display: flex; flex-wrap: wrap; gap: 10px; margin: 16px 0 8px; }
+.n-pill {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--navy);
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 8px 15px;
+}
+
+.n-price-band {
+  background: var(--navy);
+  border-radius: 16px;
+  padding: 32px 32px 36px;
+  margin: 28px 0;
+}
+.n-price-band h3 { color: var(--cream); margin-bottom: 10px; }
+.n-price-band p { color: rgba(250,247,242,0.72); font-size: 0.95rem; margin-bottom: 0; }
+.n-price-cta {
+  background: rgba(250,247,242,0.06);
+  border: 1px solid rgba(250,247,242,0.16);
+  border-radius: 10px;
+  padding: 18px 20px;
+  margin-top: 20px;
+}
+.n-price-cta p { color: rgba(250,247,242,0.75); font-size: 0.88rem; margin-bottom: 14px; }
+
+.n-transport-list { list-style: none; margin: 16px 0 8px; padding: 0; }
+.n-transport-list li {
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: var(--charcoal);
+  padding-left: 16px;
+  border-left: 2px solid var(--gold);
+  margin-bottom: 12px;
+}
+.n-transport-list b { color: var(--navy); }
+
+.n-honest-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  margin: 16px 0;
+}
+.n-honest-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--slate);
+  margin-bottom: 8px;
+  display: block;
+}
+.n-honest-grid p { font-size: 0.92rem; line-height: 1.6; color: var(--charcoal); margin-bottom: 0; }
+
+.n-video-cta {
+  background: var(--navy);
+  border-radius: 16px;
+  padding: 40px;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 32px;
+  align-items: center;
+}
+.n-video-cta h3 { color: var(--cream); margin-bottom: 10px; }
+.n-video-cta p { color: rgba(250,247,242,0.72); font-size: 0.92rem; margin-bottom: 18px; max-width: 46ch; }
+.n-video-cta .video-placeholder { margin: 0; }
 
 /* ---------- Responsive ---------- */
 
