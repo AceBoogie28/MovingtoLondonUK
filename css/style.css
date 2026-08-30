@@ -15,6 +15,8 @@
   --charcoal: #22252b;
   --slate: #5b6472;
   --border: #e6e0d4;
+  --ink-70: rgba(20,33,61,0.72);
+  --ink-45: rgba(20,33,61,0.48);
   --max-width: 1120px;
   --radius: 10px;
 }
@@ -147,8 +149,7 @@ img { max-width: 100%; display: block; }
 /* ---------- Hero ---------- */
 
 .hero {
-  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
-  color: #fff;
+  background: var(--cream);
   padding: 90px 0 80px;
 }
 
@@ -159,11 +160,11 @@ img { max-width: 100%; display: block; }
   align-items: center;
 }
 
-.hero h1 { color: #fff; }
+.hero .eyebrow { color: var(--ink-45); }
 
 .hero p.lead {
   font-size: 1.15rem;
-  color: #cfd4e0;
+  color: var(--slate);
   max-width: 46ch;
 }
 
@@ -188,13 +189,65 @@ img { max-width: 100%; display: block; }
   width: 64px;
   height: 64px;
   border-radius: 50%;
-  background: var(--gold);
+  background: var(--cream);
   display: flex;
   align-items: center;
   justify-content: center;
   color: var(--navy);
   font-size: 1.4rem;
 }
+
+/* ---------- Homepage compass-settling intro (hero only, plays once on load) ---------- */
+
+.compass-intro { width: 60px; height: 60px; margin-bottom: 20px; }
+.compass-intro svg { display: block; }
+
+.hero .eyebrow,
+.hero h1,
+.hero p.lead,
+.hero .hero-actions,
+.hero .video-placeholder,
+.hero .compass-intro {
+  opacity: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero .eyebrow,
+  .hero h1,
+  .hero p.lead,
+  .hero .hero-actions,
+  .hero .video-placeholder,
+  .hero .compass-intro {
+    opacity: 1 !important;
+    animation: none !important;
+    transform: none !important;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .hero .compass-intro { animation: mtlMarkIn .4s ease both; }
+  .hero .compass-intro .needle { animation: mtlNeedleSettle 1.7s cubic-bezier(.22,.61,.36,1) both; }
+  .hero .eyebrow { animation: mtlFadeUp .5s ease both; animation-delay: 1.5s; }
+  .hero h1 { animation: mtlFadeUp .55s ease both; animation-delay: 1.65s; }
+  .hero p.lead { animation: mtlFadeUp .5s ease both; animation-delay: 1.85s; }
+  .hero .hero-actions { animation: mtlFadeUp .5s ease both; animation-delay: 2s; }
+  .hero .video-placeholder { animation: mtlFadeIn .6s ease both; animation-delay: 1.2s; }
+}
+
+@keyframes mtlMarkIn { from { opacity: 0; transform: scale(.7); } to { opacity: 1; transform: scale(1); } }
+@keyframes mtlNeedleSettle {
+  0%   { transform: rotate(0deg); }
+  10%  { transform: rotate(300deg); }
+  35%  { transform: rotate(650deg); }
+  55%  { transform: rotate(760deg); }
+  70%  { transform: rotate(705deg); }
+  82%  { transform: rotate(730deg); }
+  91%  { transform: rotate(716deg); }
+  97%  { transform: rotate(722deg); }
+  100% { transform: rotate(720deg); }
+}
+@keyframes mtlFadeUp { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes mtlFadeIn { from { opacity: 0; } to { opacity: 1; } }
 
 /* ---------- Buttons ---------- */
 
@@ -298,6 +351,125 @@ section { padding: 72px 0; }
 .card p { color: var(--slate); font-size: 0.95rem; margin-bottom: 0; }
 
 .card-link { font-size: 0.9rem; font-weight: 600; margin-top: 12px; display: inline-block; }
+
+/* ---------- Homepage "Start Here" guides, dark band ---------- */
+
+.site-guides { background: var(--navy); border-radius: 16px; padding: 44px 32px 48px; }
+
+.guides-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 26px;
+}
+
+.guides-eyebrow {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(250,247,242,0.5);
+  margin: 0 0 10px;
+  display: block;
+}
+
+.guides-head h2 { color: var(--cream); margin: 0; }
+
+.all-guides {
+  background: var(--gold);
+  color: var(--navy);
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 10px 18px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+.all-guides:hover { background: var(--gold-light); color: var(--navy); }
+
+.guide-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.guide-card { display: block; background: #233355; border-radius: 10px; padding: 22px 20px 24px; transition: transform 0.15s ease; }
+.guide-card:hover { transform: translateY(-3px); }
+
+.guide-tag {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: rgba(250,247,242,0.45);
+  margin: 0 0 12px;
+  display: block;
+}
+
+.guide-card h3 { color: var(--cream); font-size: 1.15rem; margin-bottom: 8px; }
+
+.guide-card p { color: rgba(250,247,242,0.62); font-size: 0.9rem; margin-bottom: 14px; }
+
+.guide-card .card-link { color: rgba(250,247,242,0.85); }
+
+@media (max-width: 700px) {
+  .guide-cards { grid-template-columns: 1fr; }
+}
+
+/* ---------- Homepage area explorer map ---------- */
+
+.map-shell { background: var(--cream-dark); border: 1px solid var(--border); border-radius: 12px; padding: 22px; }
+
+.map-grid { display: grid; grid-template-columns: 1.7fr 1fr; gap: 22px; align-items: start; }
+
+.geo-map { width: 100%; height: auto; display: block; }
+
+.geo-point { cursor: pointer; opacity: 1; transition: opacity .2s ease; }
+.geo-point:focus-visible { outline: 2px solid var(--navy); outline-offset: 4px; }
+.map-grid:hover .geo-point { opacity: .35; }
+.map-grid .geo-point:hover { opacity: 1; }
+.geo-map.locked .geo-point { opacity: .35; }
+.geo-map.locked .geo-point.active { opacity: 1; }
+
+.pt-dot { fill: var(--navy); fill-opacity: .7; transition: r .15s ease; }
+.geo-point:hover .pt-dot,
+.geo-point.active .pt-dot { fill-opacity: 1; }
+
+.pt-label {
+  font-family: "Inter", sans-serif;
+  font-size: 11px;
+  fill: var(--ink-45);
+  transition: fill .15s ease;
+}
+.geo-point:hover .pt-label,
+.geo-point.active .pt-label { fill: var(--navy); font-weight: 600; }
+
+.thames { fill: none; stroke: var(--navy); stroke-opacity: .2; stroke-width: 6; stroke-linecap: round; stroke-linejoin: round; }
+
+.map-panel { background: var(--cream); border: 1px solid var(--border); border-radius: 10px; padding: 22px 22px 24px; position: sticky; top: 20px; }
+
+.mp-tag {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink-45);
+  margin: 0 0 10px;
+}
+
+.mp-title { font-family: "Fraunces", serif; font-weight: 600; font-size: 1.35rem; color: var(--navy); margin: 0 0 12px; min-height: 29px; }
+
+.mp-hook { font-size: 0.9rem; line-height: 1.65; color: var(--slate); margin: 0 0 16px; min-height: 68px; }
+
+.mp-link { font-size: 0.85rem; font-weight: 600; color: var(--navy); text-decoration: none; border-bottom: 1px solid rgba(20,33,61,0.3); padding-bottom: 1px; }
+
+.map-hint { font-size: 0.78rem; color: var(--ink-45); margin: 16px 0 0; }
+
+@media (max-width: 700px) {
+  .map-grid { grid-template-columns: 1fr; }
+  .map-panel { position: static; }
+}
 
 /* ---------- Handoff / CTA banner ---------- */
 
