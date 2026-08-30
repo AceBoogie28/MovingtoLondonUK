@@ -43,9 +43,8 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// Homepage area explorer map — 15 neighbourhoods plotted along a real-geometry
-// Thames trace. Only Clapham has a live page today; the rest link through to
-// the neighborhoods hub with a "Coming soon" label until their pages exist.
+// Homepage area explorer map — all 15 neighbourhoods plotted along a
+// real-geometry Thames trace, each linking to its own live guide.
 document.addEventListener("DOMContentLoaded", function () {
   var svg = document.getElementById("geoMap");
   if (!svg) return;
@@ -57,21 +56,21 @@ document.addEventListener("DOMContentLoaded", function () {
   var NS = "http://www.w3.org/2000/svg";
 
   var NEIGHBOURHOODS = [
-    { name: "Hampstead", tag: "North London", hook: "A heath the size of a small town and a village centre that barely feels like London at all.", x: 236.7, y: 35, side: "right", href: "neighborhoods/index.html", available: false },
-    { name: "Islington", tag: "North London", hook: "Georgian terraces and a genuinely walkable high street, ten minutes from the City.", x: 345.6, y: 89.1, side: "left", href: "neighborhoods/index.html", available: false },
-    { name: "Marylebone", tag: "Central London", hook: "Village shops, garden squares, and the easiest central postcode to actually feel settled in.", x: 276.9, y: 176.7, side: "left", href: "neighborhoods/index.html", available: false },
-    { name: "Notting Hill", tag: "West London", hook: "Colourful terraces and a Saturday market that's still a real neighbourhood, not just a postcard.", x: 209.8, y: 211.6, side: "right", href: "neighborhoods/index.html", available: false },
-    { name: "South Kensington", tag: "West London", hook: "The Lycée, the museums, and the closest thing London has to a French quarter.", x: 222.7, y: 262.6, side: "right", href: "neighborhoods/index.html", available: false },
-    { name: "Chelsea", tag: "West London", hook: "The most established expat postcode in the city, and priced like it — north bank, facing Battersea across the water.", x: 245.8, y: 281.1, side: "right", href: "neighborhoods/index.html", available: false },
-    { name: "Richmond", tag: "West London", hook: "Green space, riverside living, and a quieter pace close to the city, right where the river loops north around Kew before winding on toward Hammersmith.", x: 69.5, y: 377.2, side: "right", href: "neighborhoods/index.html", available: false },
-    { name: "Wandsworth & Putney", tag: "South West London", hook: "Good schools and a towpath commute, for people who left the excitement behind on purpose.", x: 175.1, y: 401.2, side: "right", href: "neighborhoods/index.html", available: false },
-    { name: "Battersea", tag: "South West London", hook: "New-build riverside towers where the Power Station used to be — south bank, directly across from Chelsea.", x: 261.4, y: 343.5, side: "right", href: "neighborhoods/index.html", available: false },
+    { name: "Hampstead", tag: "North London", hook: "A heath the size of a small town and a village centre that barely feels like London at all.", x: 236.7, y: 35, side: "right", href: "neighborhoods/hampstead.html", available: true },
+    { name: "Islington", tag: "North London", hook: "Georgian terraces and a genuinely walkable high street, ten minutes from the City.", x: 345.6, y: 89.1, side: "left", href: "neighborhoods/islington.html", available: true },
+    { name: "Marylebone", tag: "Central London", hook: "Village shops, garden squares, and the easiest central postcode to actually feel settled in.", x: 276.9, y: 176.7, side: "left", href: "neighborhoods/marylebone.html", available: true },
+    { name: "Notting Hill", tag: "West London", hook: "Colourful terraces and a Saturday market that's still a real neighbourhood, not just a postcard.", x: 209.8, y: 211.6, side: "right", href: "neighborhoods/notting-hill.html", available: true },
+    { name: "South Kensington", tag: "West London", hook: "The Lycée, the museums, and the closest thing London has to a French quarter.", x: 222.7, y: 262.6, side: "right", href: "neighborhoods/south-kensington.html", available: true },
+    { name: "Chelsea", tag: "West London", hook: "The most established expat postcode in the city, and priced like it — north bank, facing Battersea across the water.", x: 245.8, y: 281.1, side: "right", href: "neighborhoods/chelsea.html", available: true },
+    { name: "Richmond", tag: "West London", hook: "Green space, riverside living, and a quieter pace close to the city, right where the river loops north around Kew before winding on toward Hammersmith.", x: 69.5, y: 377.2, side: "right", href: "neighborhoods/richmond.html", available: true },
+    { name: "Wandsworth & Putney", tag: "South West London", hook: "Good schools and a towpath commute, for people who left the excitement behind on purpose.", x: 175.1, y: 401.2, side: "right", href: "neighborhoods/wandsworth-putney.html", available: true },
+    { name: "Battersea", tag: "South West London", hook: "New-build riverside towers where the Power Station used to be — south bank, directly across from Chelsea.", x: 261.4, y: 343.5, side: "right", href: "neighborhoods/battersea.html", available: true },
     { name: "Clapham", tag: "South West London", hook: "Young professionals, commons, and a commute that actually works.", x: 287.8, y: 389, side: "right", href: "neighborhoods/clapham.html", available: true },
-    { name: "Brixton", tag: "South London", hook: "Market stalls, live music, and a nightlife scene that hasn't been sanded down yet.", x: 330, y: 410, side: "right", href: "neighborhoods/index.html", available: false },
-    { name: "Shoreditch", tag: "East London", hook: "Warehouses turned studios, and the fastest-changing postcode on this whole list.", x: 380.8, y: 159.4, side: "right", href: "neighborhoods/index.html", available: false },
-    { name: "Hackney", tag: "East London", hook: "Creative, fast-changing, and one of the most talked-about areas in the city.", x: 413, y: 76.3, side: "right", href: "neighborhoods/index.html", available: false },
-    { name: "Canary Wharf", tag: "East London", hook: "Glass towers built specifically for the relocation-package crowd — if that's you, this is home. Sits on the Isle of Dogs, wrapped by the river on three sides.", x: 458.7, y: 225.2, side: "right", href: "neighborhoods/index.html", available: false },
-    { name: "Greenwich", tag: "South East London", hook: "Maritime history, a park with a view of the whole city, and prices that still make sense — south bank, just past the river's tightest bend.", x: 491.2, y: 331.4, side: "right", href: "neighborhoods/index.html", available: false }
+    { name: "Brixton", tag: "South London", hook: "Market stalls, live music, and a nightlife scene that hasn't been sanded down yet.", x: 330, y: 410, side: "right", href: "neighborhoods/brixton.html", available: true },
+    { name: "Shoreditch", tag: "East London", hook: "Warehouses turned studios, and the fastest-changing postcode on this whole list.", x: 380.8, y: 159.4, side: "right", href: "neighborhoods/shoreditch.html", available: true },
+    { name: "Hackney", tag: "East London", hook: "Creative, fast-changing, and one of the most talked-about areas in the city.", x: 413, y: 76.3, side: "right", href: "neighborhoods/hackney.html", available: true },
+    { name: "Canary Wharf", tag: "East London", hook: "Glass towers built specifically for the relocation-package crowd — if that's you, this is home. Sits on the Isle of Dogs, wrapped by the river on three sides.", x: 458.7, y: 225.2, side: "right", href: "neighborhoods/canary-wharf.html", available: true },
+    { name: "Greenwich", tag: "South East London", hook: "Maritime history, a park with a view of the whole city, and prices that still make sense — south bank, just past the river's tightest bend.", x: 491.2, y: 331.4, side: "right", href: "neighborhoods/greenwich.html", available: true }
   ];
 
   var pointEls = [];
