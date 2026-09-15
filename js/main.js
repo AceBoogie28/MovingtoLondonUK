@@ -31,6 +31,8 @@ document.addEventListener("DOMContentLoaded", function () {
         .then(function () {
           var note = form.querySelector(".form-success");
           if (note) note.style.display = "block";
+          var downloadLink = form.querySelector(".form-download-link");
+          if (downloadLink) downloadLink.style.display = "inline-block";
           form.reset();
         })
         .catch(function () {
