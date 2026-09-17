@@ -28,7 +28,10 @@ document.addEventListener("DOMContentLoaded", function () {
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: data
       })
-        .then(function () {
+        .then(function (response) {
+          if (!response.ok) {
+            throw new Error("Form submission failed with status " + response.status);
+          }
           var note = form.querySelector(".form-success");
           if (note) note.style.display = "block";
           var downloadLink = form.querySelector(".form-download-link");
@@ -36,7 +39,10 @@ document.addEventListener("DOMContentLoaded", function () {
           form.reset();
         })
         .catch(function () {
-          // Fetch failed (likely not deployed on Netlify yet) — submit normally.
+          // Fetch failed, or Netlify didn't accept the submission (e.g. form
+          // detection isn't enabled yet, or not deployed on Netlify at all)
+          // — fall back to a normal POST so the browser's native submission
+          // still has a chance to work, or at least surfaces the real error.
           form.removeEventListener("submit", handleSubmit);
           form.submit();
         });
