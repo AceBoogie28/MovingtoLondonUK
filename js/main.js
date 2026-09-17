@@ -16,7 +16,17 @@ document.addEventListener("DOMContentLoaded", function () {
   // Forms — see README.md. Submits via AJAX so the page doesn't reload;
   // falls back to a normal POST if the fetch fails (e.g. not yet hosted
   // on Netlify, or opened locally via file://).
-  var forms = document.querySelectorAll('form[data-netlify="true"]');
+  //
+  // Selected by the hidden form-name field rather than [data-netlify="true"]:
+  // once Netlify's Forms detection is enabled, it rewrites the deployed HTML
+  // and strips the data-netlify attribute after registering the form (the
+  // hidden form-name input survives), so selecting on that attribute finds
+  // nothing on the live site and every submission silently falls through to
+  // a native POST instead of running this handler at all.
+  var forms = Array.prototype.filter.call(
+    document.querySelectorAll("form"),
+    function (form) { return form.querySelector('input[name="form-name"]'); }
+  );
   forms.forEach(function (form) {
     function handleSubmit(e) {
       e.preventDefault();
