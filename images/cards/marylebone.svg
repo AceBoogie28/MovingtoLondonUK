@@ -1,29 +1,60 @@
 <svg viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg">
   <rect width="400" height="250" fill="#ffffff"/>
   <line x1="0" y1="205" x2="400" y2="205" stroke="#14213d" stroke-width="2" opacity="0.5"/>
-  <!-- shopfront -->
-  <rect x="120" y="130" width="120" height="75" fill="#14213d" fill-opacity="0.04" stroke="#14213d" stroke-width="2.25"/>
-  <rect x="132" y="150" width="40" height="45" fill="none" stroke="#14213d" stroke-width="1.5"/>
-  <rect x="188" y="150" width="40" height="45" fill="none" stroke="#14213d" stroke-width="1.5"/>
-  <line x1="150" y1="150" x2="150" y2="195" stroke="#14213d" stroke-width="1"/>
-  <line x1="132" y1="172" x2="172" y2="172" stroke="#14213d" stroke-width="1"/>
-  <line x1="208" y1="150" x2="208" y2="195" stroke="#14213d" stroke-width="1"/>
-  <line x1="188" y1="172" x2="228" y2="172" stroke="#14213d" stroke-width="1"/>
-  <!-- awning -->
-  <path d="M116 130 L244 130 L236 115 L124 115 Z" fill="#14213d" fill-opacity="0.09" stroke="#14213d" stroke-width="2"/>
-  <g stroke="#14213d" stroke-width="1" opacity="0.4">
-    <line x1="140" y1="115" x2="132" y2="130"/>
-    <line x1="160" y1="115" x2="154" y2="130"/>
-    <line x1="180" y1="115" x2="176" y2="130"/>
-    <line x1="200" y1="115" x2="198" y2="130"/>
-    <line x1="220" y1="115" x2="220" y2="130"/>
+
+  <!-- row of central London townhouses/mixed-use buildings, varying height -->
+  <rect x="40" y="88" width="58" height="117" fill="#14213d" fill-opacity="0.04" stroke="#14213d" stroke-width="1.75"/>
+  <rect x="98" y="70" width="62" height="135" fill="#14213d" fill-opacity="0.05" stroke="#14213d" stroke-width="2"/>
+  <rect x="160" y="82" width="60" height="123" fill="#14213d" fill-opacity="0.04" stroke="#14213d" stroke-width="1.75"/>
+  <rect x="220" y="66" width="64" height="139" fill="#14213d" fill-opacity="0.05" stroke="#14213d" stroke-width="2"/>
+  <rect x="284" y="90" width="56" height="115" fill="#14213d" fill-opacity="0.04" stroke="#14213d" stroke-width="1.75"/>
+
+  <!-- upper-floor windows -->
+  <g stroke="#14213d" stroke-width="1" opacity="0.45">
+    <rect x="50" y="100" width="12" height="15" fill="none"/><rect x="76" y="100" width="12" height="15" fill="none"/>
+    <rect x="50" y="128" width="12" height="15" fill="none"/><rect x="76" y="128" width="12" height="15" fill="none"/>
+
+    <rect x="108" y="82" width="13" height="16" fill="none"/><rect x="137" y="82" width="13" height="16" fill="none"/>
+    <rect x="108" y="112" width="13" height="16" fill="none"/><rect x="137" y="112" width="13" height="16" fill="none"/>
+    <rect x="108" y="142" width="13" height="16" fill="none"/><rect x="137" y="142" width="13" height="16" fill="none"/>
+
+    <rect x="170" y="94" width="12" height="15" fill="none"/><rect x="196" y="94" width="12" height="15" fill="none"/>
+    <rect x="170" y="122" width="12" height="15" fill="none"/><rect x="196" y="122" width="12" height="15" fill="none"/>
+
+    <rect x="230" y="78" width="13" height="16" fill="none"/><rect x="259" y="78" width="13" height="16" fill="none"/>
+    <rect x="230" y="108" width="13" height="16" fill="none"/><rect x="259" y="108" width="13" height="16" fill="none"/>
+    <rect x="230" y="138" width="13" height="16" fill="none"/><rect x="259" y="138" width="13" height="16" fill="none"/>
+
+    <rect x="294" y="102" width="12" height="15" fill="none"/><rect x="318" y="102" width="12" height="15" fill="none"/>
+    <rect x="294" y="130" width="12" height="15" fill="none"/><rect x="318" y="130" width="12" height="15" fill="none"/>
   </g>
-  <!-- lamppost -->
+
+  <!-- ground-floor shopfront with awning, set into the second building -->
+  <rect x="106" y="150" width="52" height="55" fill="#ffffff" stroke="#14213d" stroke-width="1.75"/>
+  <line x1="132" y1="150" x2="132" y2="205" stroke="#14213d" stroke-width="1"/>
+  <line x1="112" y1="172" x2="126" y2="172" stroke="#14213d" stroke-width="1"/>
+  <line x1="138" y1="172" x2="152" y2="172" stroke="#14213d" stroke-width="1"/>
+  <path d="M100 150 L164 150 L157 137 L107 137 Z" fill="#14213d" fill-opacity="0.09" stroke="#14213d" stroke-width="1.75"/>
+  <g stroke="#14213d" stroke-width="0.9" opacity="0.4">
+    <line x1="117" y1="137" x2="112" y2="150"/>
+    <line x1="132" y1="137" x2="130" y2="150"/>
+    <line x1="147" y1="137" x2="148" y2="150"/>
+  </g>
+
+  <!-- ground floor of neighbouring building: second shopfront -->
+  <rect x="232" y="155" width="46" height="50" fill="#ffffff" stroke="#14213d" stroke-width="1.5"/>
+  <line x1="255" y1="155" x2="255" y2="205" stroke="#14213d" stroke-width="1"/>
+
+  <!-- lamppost with gold light -->
   <line x1="70" y1="205" x2="70" y2="120" stroke="#14213d" stroke-width="2.25"/>
   <circle cx="70" cy="112" r="9" fill="none" stroke="#14213d" stroke-width="2"/>
   <circle cx="70" cy="112" r="4" fill="#c08a2e"/>
-  <!-- person with shopping bag -->
-  <circle cx="290" cy="165" r="7" fill="none" stroke="#14213d" stroke-width="2"/>
-  <path d="M280 195 Q280 178 290 178 Q300 178 300 195" fill="#14213d" fill-opacity="0.09" stroke="#14213d" stroke-width="2"/>
-  <path d="M297 185 L308 185 L306 200 L295 200 Z" fill="none" stroke="#14213d" stroke-width="1.5"/>
+
+  <!-- two small pedestrians for street bustle -->
+  <circle cx="185" cy="188" r="6" fill="none" stroke="#14213d" stroke-width="1.75"/>
+  <path d="M177 205 Q177 194 185 194 Q193 194 193 205" fill="#14213d" fill-opacity="0.08" stroke="#14213d" stroke-width="1.75"/>
+  <path d="M191 197 L201 197 L199 208 L189 208 Z" fill="none" stroke="#14213d" stroke-width="1.25"/>
+
+  <circle cx="305" cy="190" r="5.5" fill="none" stroke="#14213d" stroke-width="1.5"/>
+  <path d="M298 205 Q298 195 305 195 Q312 195 312 205" fill="#14213d" fill-opacity="0.08" stroke="#14213d" stroke-width="1.5"/>
 </svg>
