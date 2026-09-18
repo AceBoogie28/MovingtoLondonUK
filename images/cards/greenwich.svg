@@ -1,0 +1,20 @@
+<svg viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="250" fill="#ffffff"/>
+  <line x1="0" y1="195" x2="400" y2="195" stroke="#14213d" stroke-width="2" opacity="0.5"/>
+  <!-- hill -->
+  <path d="M0 195 Q120 140 260 165 L400 175 L400 195 Z" fill="#14213d" fill-opacity="0.06"/>
+  <path d="M0 195 Q120 140 260 165 L400 175" fill="none" stroke="#14213d" stroke-width="2"/>
+  <!-- observatory building with dome -->
+  <rect x="255" y="118" width="60" height="47" fill="#14213d" fill-opacity="0.05" stroke="#14213d" stroke-width="2"/>
+  <circle cx="285" cy="112" r="20" fill="#14213d" fill-opacity="0.06" stroke="#14213d" stroke-width="2"/>
+  <path d="M265 118 A20 20 0 0 1 305 118" fill="none" stroke="#14213d" stroke-width="1.25" opacity="0.5"/>
+  <rect x="278" y="140" width="14" height="25" fill="none" stroke="#14213d" stroke-width="1.5"/>
+  <!-- meridian line -->
+  <line x1="285" y1="165" x2="285" y2="250" stroke="#14213d" stroke-width="1.5" stroke-dasharray="5 6" opacity="0.6"/>
+  <!-- ship silhouette -->
+  <path d="M60 178 L140 178 L128 195 L72 195 Z" fill="#14213d" fill-opacity="0.08" stroke="#14213d" stroke-width="2"/>
+  <line x1="100" y1="178" x2="100" y2="140" stroke="#14213d" stroke-width="1.75"/>
+  <line x1="80" y1="150" x2="100" y2="140" stroke="#14213d" stroke-width="1.5"/>
+  <line x1="100" y1="140" x2="118" y2="155" stroke="#14213d" stroke-width="1.5"/>
+  <circle cx="285" cy="95" r="4.5" fill="#c08a2e"/>
+</svg>

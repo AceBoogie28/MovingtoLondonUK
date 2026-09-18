@@ -1,0 +1,19 @@
+<svg viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="250" fill="#ffffff"/>
+  <!-- receipt -->
+  <path d="M150 60 L250 60 L250 195 L242 188 L234 195 L226 188 L218 195 L210 188 L202 195 L194 188 L186 195 L178 188 L170 195 L162 188 L150 195 Z" fill="#14213d" fill-opacity="0.04" stroke="#14213d" stroke-width="2"/>
+  <g stroke="#14213d" stroke-width="1.25" opacity="0.5">
+    <line x1="165" y1="80" x2="235" y2="80"/>
+    <line x1="165" y1="95" x2="235" y2="95"/>
+    <line x1="165" y1="110" x2="220" y2="110"/>
+    <line x1="165" y1="125" x2="235" y2="125"/>
+    <line x1="165" y1="140" x2="210" y2="140"/>
+    <line x1="165" y1="160" x2="235" y2="160"/>
+  </g>
+  <!-- magnifying glass -->
+  <circle cx="290" cy="130" r="30" fill="none" stroke="#14213d" stroke-width="2.5"/>
+  <line x1="311" y1="151" x2="335" y2="175" stroke="#14213d" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="290" cy="130" r="30" fill="#14213d" fill-opacity="0.04"/>
+  <!-- coin accent under the glass -->
+  <circle cx="290" cy="130" r="9" fill="#c08a2e"/>
+</svg>

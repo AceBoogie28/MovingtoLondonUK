@@ -1,0 +1,21 @@
+<svg viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="250" fill="#f0eade"/>
+  <!-- building facade -->
+  <rect x="130" y="95" width="140" height="105" fill="#14213d" fill-opacity="0.04" stroke="#14213d" stroke-width="2.25"/>
+  <g stroke="#14213d" stroke-width="1.25" opacity="0.45">
+    <rect x="145" y="110" width="20" height="24" fill="none"/>
+    <rect x="180" y="110" width="20" height="24" fill="none"/>
+    <rect x="235" y="110" width="20" height="24" fill="none"/>
+    <rect x="145" y="150" width="20" height="24" fill="none"/>
+    <rect x="235" y="150" width="20" height="24" fill="none"/>
+  </g>
+  <!-- cross emblem, centered, gold -->
+  <rect x="188" y="140" width="24" height="60" fill="#c08a2e"/>
+  <rect x="170" y="158" width="60" height="24" fill="#c08a2e"/>
+  <!-- door -->
+  <rect x="192" y="182" width="16" height="18" fill="none" stroke="#14213d" stroke-width="1.5"/>
+  <!-- stethoscope curve accent -->
+  <path d="M60 90 Q60 130 100 130 Q130 130 130 105" fill="none" stroke="#14213d" stroke-width="2" opacity="0.55"/>
+  <circle cx="60" cy="84" r="6" fill="none" stroke="#14213d" stroke-width="2" opacity="0.55"/>
+  <circle cx="130" cy="100" r="7" fill="none" stroke="#14213d" stroke-width="2" opacity="0.55"/>
+</svg>

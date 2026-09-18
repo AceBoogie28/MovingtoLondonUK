@@ -328,11 +328,42 @@ section { padding: 72px 0; }
 
 .card-thumb {
   aspect-ratio: 16/10;
-  background: linear-gradient(135deg, #e8dfc9, #d8c79f);
+  background: var(--cream-dark);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
 }
 
-.card-thumb.alt { background: linear-gradient(135deg, #dde3ee, #c3cee2); }
-.card-thumb.alt2 { background: linear-gradient(135deg, #e7d9d0, #d3b7a6); }
+/* Fallback tones for any card-thumb not yet mapped to an illustration */
+.card-thumb.alt { background-color: var(--panel); }
+.card-thumb.alt2 { background-color: var(--cream-dark); }
+
+/* ---------- Card illustrations (neighbourhoods, guides, resources) ---------- */
+.thumb-clapham { background-image: url("../images/cards/clapham.svg"); }
+.thumb-canary-wharf { background-image: url("../images/cards/canary-wharf.svg"); }
+.thumb-hampstead { background-image: url("../images/cards/hampstead.svg"); }
+.thumb-islington { background-image: url("../images/cards/islington.svg"); }
+.thumb-marylebone { background-image: url("../images/cards/marylebone.svg"); }
+.thumb-notting-hill { background-image: url("../images/cards/notting-hill.svg"); }
+.thumb-south-kensington { background-image: url("../images/cards/south-kensington.svg"); }
+.thumb-chelsea { background-image: url("../images/cards/chelsea.svg"); }
+.thumb-richmond { background-image: url("../images/cards/richmond.svg"); }
+.thumb-wandsworth-putney { background-image: url("../images/cards/wandsworth-putney.svg"); }
+.thumb-battersea { background-image: url("../images/cards/battersea.svg"); }
+.thumb-brixton { background-image: url("../images/cards/brixton.svg"); }
+.thumb-shoreditch { background-image: url("../images/cards/shoreditch.svg"); }
+.thumb-hackney { background-image: url("../images/cards/hackney.svg"); }
+.thumb-greenwich { background-image: url("../images/cards/greenwich.svg"); }
+.thumb-visas { background-image: url("../images/cards/visas-and-immigration.svg"); }
+.thumb-banking { background-image: url("../images/cards/banking.svg"); }
+.thumb-moving-logistics { background-image: url("../images/cards/moving-logistics.svg"); }
+.thumb-cost-of-living { background-image: url("../images/cards/cost-of-living.svg"); }
+.thumb-healthcare { background-image: url("../images/cards/healthcare.svg"); }
+.thumb-schools { background-image: url("../images/cards/schools.svg"); }
+.thumb-renting-vs-buying { background-image: url("../images/cards/renting-vs-buying.svg"); }
+.thumb-canada { background-image: url("../images/cards/canada-vs-uk-differences.svg"); }
+.thumb-neighborhoods { background-image: url("../images/cards/neighborhoods-index.svg"); }
+.thumb-checklist { background-image: url("../images/cards/relocation-checklist.svg"); }
+.thumb-contact { background-image: url("../images/cards/contact.svg"); }
 
 .card-body { padding: 20px 22px 24px; }
 

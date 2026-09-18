@@ -1,0 +1,27 @@
+<svg viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="250" fill="#f0eade"/>
+  <g fill="#14213d" opacity="0.25">
+    <circle cx="40" cy="60" r="2"/><circle cx="70" cy="40" r="1.5"/><circle cx="30" cy="100" r="1.5"/>
+    <circle cx="360" cy="180" r="2"/><circle cx="340" cy="210" r="1.5"/><circle cx="375" cy="150" r="1.5"/>
+  </g>
+  <g fill="#14213d" fill-opacity="0.06" stroke="#14213d" stroke-width="1.25" opacity="0.6">
+    <ellipse cx="160" cy="95" rx="16" ry="8"/>
+    <ellipse cx="174" cy="90" rx="12" ry="7"/>
+    <ellipse cx="220" cy="65" rx="14" ry="7"/>
+  </g>
+  <circle cx="90" cy="168" r="6.5" fill="none" stroke="#14213d" stroke-width="2"/>
+  <path d="M82 190 Q82 176 90 176 Q98 176 98 190" fill="#14213d" fill-opacity="0.1" stroke="#14213d" stroke-width="2"/>
+  <rect x="97" y="182" width="10" height="9" rx="1.5" fill="#14213d" fill-opacity="0.1" stroke="#14213d" stroke-width="1.5"/>
+  <path d="M92 178 Q220 40 300 100" fill="none" stroke="#14213d" stroke-width="2.25" stroke-dasharray="6 8"/>
+  <g transform="translate(300,100) rotate(35)">
+    <path d="M0 -10 L4 0 L0 10 L-4 0 Z" fill="#14213d"/>
+  </g>
+  <circle cx="300" cy="100" r="46" fill="none" stroke="#14213d" stroke-width="2.25"/>
+  <g stroke="#14213d" stroke-width="1.5" opacity="0.5">
+    <line x1="300" y1="54" x2="300" y2="61"/>
+    <line x1="300" y1="139" x2="300" y2="146"/>
+    <line x1="254" y1="100" x2="261" y2="100"/>
+    <line x1="339" y1="100" x2="346" y2="100"/>
+  </g>
+  <polygon points="300,72 308,93 329,100 308,107 300,128 292,107 271,100 292,93" fill="#c08a2e"/>
+</svg>
