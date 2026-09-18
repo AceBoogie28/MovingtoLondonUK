@@ -1,0 +1,29 @@
+<svg viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="250" fill="#f0eade"/>
+  <!-- clipboard -->
+  <rect x="140" y="65" width="120" height="155" rx="6" fill="#ffffff" stroke="#14213d" stroke-width="2.25"/>
+  <rect x="175" y="58" width="50" height="16" rx="4" fill="none" stroke="#14213d" stroke-width="2"/>
+  <!-- checklist rows -->
+  <g stroke="#14213d" stroke-width="1.75">
+    <rect x="158" y="95" width="14" height="14" fill="none"/>
+    <path d="M160 102 L164 106 L170 97" fill="none" stroke-width="2"/>
+  </g>
+  <line x1="182" y1="102" x2="235" y2="102" stroke="#14213d" stroke-width="1.5" opacity="0.55"/>
+
+  <g stroke="#14213d" stroke-width="1.75">
+    <rect x="158" y="122" width="14" height="14" fill="none"/>
+    <path d="M160 129 L164 133 L170 124" fill="none" stroke-width="2"/>
+  </g>
+  <line x1="182" y1="129" x2="235" y2="129" stroke="#14213d" stroke-width="1.5" opacity="0.55"/>
+
+  <g stroke="#c08a2e" stroke-width="1.75">
+    <rect x="158" y="149" width="14" height="14" fill="none" stroke="#14213d"/>
+    <path d="M160 156 L164 160 L170 151" fill="none" stroke="#c08a2e" stroke-width="2.5"/>
+  </g>
+  <line x1="182" y1="156" x2="235" y2="156" stroke="#14213d" stroke-width="1.5" opacity="0.55"/>
+
+  <g stroke="#14213d" stroke-width="1.75">
+    <rect x="158" y="176" width="14" height="14" fill="none"/>
+  </g>
+  <line x1="182" y1="183" x2="220" y2="183" stroke="#14213d" stroke-width="1.5" opacity="0.55"/>
+</svg>

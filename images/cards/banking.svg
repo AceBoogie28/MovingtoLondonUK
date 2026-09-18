@@ -1,0 +1,22 @@
+<svg viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="250" fill="#ffffff"/>
+  <line x1="0" y1="205" x2="400" y2="205" stroke="#14213d" stroke-width="2" opacity="0.5"/>
+  <!-- bank facade -->
+  <polygon points="140,95 260,95 280,125 120,125" fill="#14213d" fill-opacity="0.06" stroke="#14213d" stroke-width="2"/>
+  <rect x="120" y="125" width="160" height="65" fill="none" stroke="#14213d" stroke-width="2.25"/>
+  <g stroke="#14213d" stroke-width="2">
+    <line x1="140" y1="125" x2="140" y2="190"/>
+    <line x1="165" y1="125" x2="165" y2="190"/>
+    <line x1="190" y1="125" x2="190" y2="190"/>
+    <line x1="210" y1="125" x2="210" y2="190"/>
+    <line x1="235" y1="125" x2="235" y2="190"/>
+    <line x1="260" y1="125" x2="260" y2="190"/>
+  </g>
+  <line x1="110" y1="190" x2="290" y2="190" stroke="#14213d" stroke-width="2"/>
+  <line x1="105" y1="198" x2="295" y2="198" stroke="#14213d" stroke-width="1.5" opacity="0.55"/>
+  <line x1="100" y1="205" x2="300" y2="205" stroke="#14213d" stroke-width="1.5" opacity="0.4"/>
+  <!-- coin stack accent -->
+  <ellipse cx="335" cy="185" rx="16" ry="6" fill="none" stroke="#14213d" stroke-width="1.5"/>
+  <ellipse cx="335" cy="178" rx="16" ry="6" fill="none" stroke="#14213d" stroke-width="1.5"/>
+  <ellipse cx="335" cy="171" rx="16" ry="6" fill="#c08a2e"/>
+</svg>

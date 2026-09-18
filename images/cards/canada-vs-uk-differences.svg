@@ -1,0 +1,23 @@
+<svg viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="250" fill="#f0eade"/>
+  <!-- maple leaf, simplified -->
+  <g transform="translate(95,110)">
+    <path d="M0 -55 L10 -30 L35 -35 L20 -12 L45 -8 L22 8 L40 25 L12 20 L14 50 L0 30 L-14 50 L-12 20 L-40 25 L-22 8 L-45 -8 L-20 -12 L-35 -35 L-10 -30 Z"
+      fill="#14213d" fill-opacity="0.07" stroke="#14213d" stroke-width="2.25" stroke-linejoin="round"/>
+    <line x1="0" y1="30" x2="0" y2="55" stroke="#14213d" stroke-width="2.25"/>
+  </g>
+  <!-- dotted path -->
+  <path d="M150 110 Q225 40 300 100" fill="none" stroke="#14213d" stroke-width="2.25" stroke-dasharray="6 8"/>
+  <g transform="translate(300,100) rotate(35)">
+    <path d="M0 -10 L4 0 L0 10 L-4 0 Z" fill="#14213d"/>
+  </g>
+  <!-- compass -->
+  <circle cx="300" cy="100" r="46" fill="none" stroke="#14213d" stroke-width="2.25"/>
+  <g stroke="#14213d" stroke-width="1.5" opacity="0.5">
+    <line x1="300" y1="54" x2="300" y2="61"/>
+    <line x1="300" y1="139" x2="300" y2="146"/>
+    <line x1="254" y1="100" x2="261" y2="100"/>
+    <line x1="339" y1="100" x2="346" y2="100"/>
+  </g>
+  <polygon points="300,72 308,93 329,100 308,107 300,128 292,107 271,100 292,93" fill="#c08a2e"/>
+</svg>

@@ -1,0 +1,42 @@
+<svg viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="250" fill="#f0eade"/>
+  <line x1="0" y1="196" x2="400" y2="196" stroke="#14213d" stroke-width="2" opacity="0.55"/>
+  <g stroke="#14213d" stroke-width="1" opacity="0.35">
+    <line x1="20" y1="204" x2="32" y2="198"/>
+    <line x1="45" y1="206" x2="57" y2="200"/>
+    <line x1="255" y1="206" x2="267" y2="200"/>
+    <line x1="340" y1="205" x2="352" y2="199"/>
+    <line x1="365" y1="207" x2="377" y2="201"/>
+  </g>
+  <path d="M300 40 q6 -7 12 0 q6 -7 12 0" fill="none" stroke="#14213d" stroke-width="1.5" opacity="0.55"/>
+  <path d="M330 60 q5 -6 10 0 q5 -6 10 0" fill="none" stroke="#14213d" stroke-width="1.5" opacity="0.5"/>
+  <circle cx="100" cy="130" r="16" fill="#14213d" fill-opacity="0.07"/>
+  <circle cx="112" cy="122" r="22" fill="#14213d" fill-opacity="0.07"/>
+  <circle cx="112" cy="122" r="22" fill="none" stroke="#14213d" stroke-width="2"/>
+  <circle cx="96" cy="132" r="13" fill="none" stroke="#14213d" stroke-width="1.5"/>
+  <line x1="112" y1="144" x2="112" y2="196" stroke="#14213d" stroke-width="2.5"/>
+  <circle cx="290" cy="108" r="28" fill="#14213d" fill-opacity="0.07"/>
+  <circle cx="290" cy="108" r="28" fill="none" stroke="#14213d" stroke-width="2.5"/>
+  <circle cx="270" cy="120" r="16" fill="none" stroke="#14213d" stroke-width="1.5"/>
+  <circle cx="310" cy="122" r="14" fill="none" stroke="#14213d" stroke-width="1.5"/>
+  <line x1="290" y1="136" x2="290" y2="196" stroke="#14213d" stroke-width="2.5"/>
+  <g stroke="#14213d" stroke-width="2.25" stroke-linecap="round">
+    <line x1="175" y1="196" x2="175" y2="170"/>
+    <line x1="225" y1="196" x2="225" y2="170"/>
+    <line x1="172" y1="170" x2="228" y2="170"/>
+    <line x1="172" y1="180" x2="228" y2="180"/>
+    <line x1="176" y1="180" x2="176" y2="196"/>
+    <line x1="224" y1="180" x2="224" y2="196"/>
+  </g>
+  <circle cx="197" cy="156" r="7" fill="none" stroke="#14213d" stroke-width="2"/>
+  <path d="M188 178 Q188 163 197 163 Q206 163 206 178" fill="#14213d" fill-opacity="0.1" stroke="#14213d" stroke-width="2"/>
+  <path d="M150 196 q0 -10 9 -10 q4 0 6 3 q5 -1 6 3 q3 0 3 4 l0 3 q0 3 -3 3 l-18 0 q-3 0 -3 -3 z" fill="#14213d" fill-opacity="0.08" stroke="#14213d" stroke-width="1.75"/>
+  <line x1="153" y1="199" x2="153" y2="196" stroke="#14213d" stroke-width="1.75"/>
+  <line x1="170" y1="199" x2="170" y2="196" stroke="#14213d" stroke-width="1.75"/>
+  <circle cx="340" cy="48" r="10" fill="#c08a2e"/>
+  <g stroke="#c08a2e" stroke-width="2" stroke-linecap="round">
+    <line x1="340" y1="28" x2="340" y2="22"/>
+    <line x1="358" y1="48" x2="364" y2="48"/>
+    <line x1="353" y1="35" x2="358" y2="30"/>
+  </g>
+</svg>

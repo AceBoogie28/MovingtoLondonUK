@@ -1,0 +1,38 @@
+<svg viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="250" fill="#f0eade"/>
+  <line x1="0" y1="205" x2="400" y2="205" stroke="#14213d" stroke-width="2" opacity="0.5"/>
+  <!-- terrace houses -->
+  <g stroke="#14213d" stroke-width="2" fill="none">
+    <rect x="70" y="110" width="70" height="95"/>
+    <rect x="140" y="95" width="70" height="110"/>
+    <rect x="210" y="112" width="70" height="93"/>
+  </g>
+  <!-- roofline pediments -->
+  <path d="M70 110 L105 96 L140 110" fill="none" stroke="#14213d" stroke-width="1.75"/>
+  <path d="M140 95 L175 80 L210 95" fill="none" stroke="#14213d" stroke-width="1.75"/>
+  <path d="M210 112 L245 98 L280 112" fill="none" stroke="#14213d" stroke-width="1.75"/>
+  <!-- windows -->
+  <g stroke="#14213d" stroke-width="1.25" opacity="0.55">
+    <rect x="80" y="125" width="14" height="18" fill="none"/>
+    <rect x="105" y="125" width="14" height="18" fill="none"/>
+    <rect x="80" y="155" width="14" height="18" fill="none"/>
+    <rect x="105" y="155" width="14" height="18" fill="none"/>
+    <rect x="150" y="112" width="14" height="18" fill="none"/>
+    <rect x="176" y="112" width="14" height="18" fill="none"/>
+    <rect x="150" y="142" width="14" height="18" fill="none"/>
+    <rect x="176" y="142" width="14" height="18" fill="none"/>
+    <rect x="220" y="128" width="14" height="18" fill="none"/>
+    <rect x="246" y="128" width="14" height="18" fill="none"/>
+    <rect x="220" y="158" width="14" height="18" fill="none"/>
+    <rect x="246" y="158" width="14" height="18" fill="none"/>
+  </g>
+  <!-- doors, middle one gold -->
+  <rect x="82" y="182" width="16" height="23" fill="none" stroke="#14213d" stroke-width="1.5"/>
+  <rect x="167" y="178" width="16" height="27" fill="#c08a2e"/>
+  <rect x="252" y="182" width="16" height="23" fill="none" stroke="#14213d" stroke-width="1.5"/>
+  <!-- railings -->
+  <g stroke="#14213d" stroke-width="1.25" opacity="0.6">
+    <line x1="60" y1="205" x2="60" y2="192"/><line x1="66" y1="205" x2="66" y2="192"/>
+    <line x1="285" y1="205" x2="285" y2="192"/><line x1="291" y1="205" x2="291" y2="192"/>
+  </g>
+</svg>
