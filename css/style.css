@@ -197,6 +197,65 @@ img { max-width: 100%; display: block; }
   font-size: 1.4rem;
 }
 
+/* ---------- Real video thumbnails + click-to-play embed ---------- */
+
+.video-thumb,
+.video-embed {
+  position: relative;
+  display: block;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: var(--navy);
+}
+
+.video-embed {
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  margin: 8px 0 24px;
+}
+
+.video-thumb img,
+.video-embed img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.video-embed iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.play-badge {
+  position: absolute;
+  right: 14px;
+  bottom: 14px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(250,247,242,0.95);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 3px 12px rgba(20,33,61,0.4);
+  transition: transform 0.15s ease;
+}
+
+.play-badge::before {
+  content: "";
+  margin-left: 3px;
+  border-style: solid;
+  border-width: 8px 0 8px 14px;
+  border-color: transparent transparent transparent var(--navy);
+}
+
+.card:hover .play-badge,
+.video-embed:hover .play-badge { transform: scale(1.1); }
+
 /* ---------- Homepage compass-settling intro (hero only, plays once on load) ---------- */
 
 .compass-intro { width: 60px; height: 60px; margin-bottom: 20px; }

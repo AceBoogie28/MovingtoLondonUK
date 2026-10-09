@@ -155,3 +155,22 @@ document.addEventListener("DOMContentLoaded", function () {
   select(defaultIndex < 0 ? 0 : defaultIndex);
   svg.classList.remove("locked");
 });
+
+// Click-to-play YouTube embeds: the player (and any third-party requests) only
+// loads when someone clicks. Without JS the link still opens the video on YouTube.
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll(".video-embed[data-video-id]").forEach(function (el) {
+    el.addEventListener("click", function (e) {
+      e.preventDefault();
+      var iframe = document.createElement("iframe");
+      iframe.src = "https://www.youtube-nocookie.com/embed/" + el.getAttribute("data-video-id") + "?autoplay=1&rel=0";
+      iframe.title = el.getAttribute("aria-label") || "YouTube video";
+      iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+      iframe.allowFullscreen = true;
+      var box = document.createElement("div");
+      box.className = "video-embed";
+      box.appendChild(iframe);
+      el.replaceWith(box);
+    });
+  });
+});
