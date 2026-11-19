@@ -651,6 +651,11 @@ section { padding: 72px 0; }
 /* ---------- Forms ---------- */
 
 .form-row { margin-bottom: 16px; }
+.form-consent { margin: 4px 0 16px; }
+.form-consent label { display: flex; gap: 10px; align-items: flex-start; font-size: 0.88rem; color: var(--charcoal); line-height: 1.45; cursor: pointer; }
+.form-consent input[type="checkbox"] { width: 18px; height: 18px; margin-top: 2px; flex: none; accent-color: var(--navy); }
+.form-note { font-size: 0.8rem; color: var(--slate); line-height: 1.5; margin-top: 12px; }
+.form-note a { color: var(--navy); text-decoration: underline; }
 .form-row label {
   display: block;
   font-size: 0.88rem;
