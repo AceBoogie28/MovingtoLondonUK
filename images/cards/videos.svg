@@ -1,0 +1,24 @@
+<svg viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="250" fill="#ffffff"/>
+  <line x1="0" y1="205" x2="400" y2="205" stroke="#14213d" stroke-width="2" opacity="0.5"/>
+  <!-- tripod -->
+  <g stroke="#14213d" stroke-width="2.25" stroke-linecap="round">
+    <line x1="162" y1="150" x2="132" y2="205"/>
+    <line x1="170" y1="150" x2="172" y2="205"/>
+    <line x1="178" y1="150" x2="208" y2="205"/>
+    <line x1="156" y1="150" x2="186" y2="150"/>
+  </g>
+  <!-- camera -->
+  <rect x="120" y="88" width="112" height="58" rx="7" fill="#ffffff" stroke="#14213d" stroke-width="2.25"/>
+  <rect x="96" y="102" width="24" height="30" rx="3" fill="#ffffff" stroke="#14213d" stroke-width="2.25"/>
+  <circle cx="108" cy="117" r="7" fill="none" stroke="#14213d" stroke-width="2"/>
+  <rect x="172" y="76" width="44" height="12" rx="3" fill="#14213d" fill-opacity="0.08" stroke="#14213d" stroke-width="2"/>
+  <rect x="186" y="100" width="34" height="22" rx="3" fill="none" stroke="#14213d" stroke-width="1.75"/>
+  <circle cx="132" cy="100" r="4" fill="#c08a2e"/>
+  <!-- screen with play button -->
+  <rect x="270" y="92" width="90" height="56" rx="5" fill="#ffffff" stroke="#14213d" stroke-width="2.25"/>
+  <polygon points="302,106 302,134 330,120" fill="#c08a2e"/>
+  <line x1="315" y1="148" x2="315" y2="164" stroke="#14213d" stroke-width="2.25"/>
+  <line x1="297" y1="164" x2="333" y2="164" stroke="#14213d" stroke-width="2.25" stroke-linecap="round"/>
+  <path d="M242 118 C252 112 258 112 268 118" fill="none" stroke="#14213d" stroke-width="1.5" stroke-dasharray="3 4" opacity="0.6"/>
+</svg>
