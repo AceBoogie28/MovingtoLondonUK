@@ -221,3 +221,15 @@ document.addEventListener("DOMContentLoaded", function () {
   window.addEventListener("resize", onScroll);
   update();
 });
+
+
+// Mark the nav link for the page (or section) you are on.
+document.addEventListener("DOMContentLoaded", function () {
+  function norm(path) { return path.replace(/index\.html$/, "").replace(/\.html$/, ""); }
+  var cur = norm(window.location.pathname);
+  Array.prototype.forEach.call(document.querySelectorAll(".nav-links a:not(.nav-cta)"), function (a) {
+    var h = norm(new URL(a.getAttribute("href"), window.location.href).pathname);
+    var on = h === "/" ? cur === "/" : (cur === h || (h.slice(-1) === "/" && cur.indexOf(h) === 0));
+    if (on) a.setAttribute("aria-current", "page");
+  });
+});
