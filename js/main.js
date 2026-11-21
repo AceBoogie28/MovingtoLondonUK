@@ -174,3 +174,50 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
+
+// Home page: a train rides the "Relocation Line" as the page scrolls, and each
+// stop fills in once the train has passed it. Skipped for reduced-motion users.
+document.addEventListener("DOMContentLoaded", function () {
+  var wrap = document.querySelector(".tube-wrap");
+  if (!wrap) return;
+  var list = wrap.querySelector(".tube");
+  var train = wrap.querySelector(".train");
+  var stops = wrap.querySelectorAll(".tube .stop");
+  if (!list || !train || !stops.length) return;
+  if (window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+  wrap.classList.add("tube-live");
+  var ticking = false;
+
+  // Stop centres measured from the top of the wrapper (offsetTop is relative to
+  // each list item, so use bounding boxes instead).
+  function centres() {
+    var base = wrap.getBoundingClientRect().top;
+    return Array.prototype.map.call(stops, function (s) {
+      var r = s.getBoundingClientRect();
+      return r.top - base + r.height / 2;
+    });
+  }
+
+  function update() {
+    ticking = false;
+    var vh = window.innerHeight;
+    var rect = list.getBoundingClientRect();
+    var p = (vh * 0.85 - rect.top) / (rect.height + vh * 0.5);
+    p = Math.max(0, Math.min(1, p));
+    var ys = centres();
+    var y = ys[0] + (ys[ys.length - 1] - ys[0]) * p;
+    train.style.transform = "translateY(" + (y - train.offsetHeight / 2) + "px)";
+    Array.prototype.forEach.call(stops, function (s, i) {
+      s.classList.toggle("is-visited", y >= ys[i] - 1);
+    });
+  }
+
+  function onScroll() {
+    if (!ticking) { ticking = true; window.requestAnimationFrame(update); }
+  }
+  window.addEventListener("scroll", onScroll, { passive: true });
+  window.addEventListener("resize", onScroll);
+  update();
+});
