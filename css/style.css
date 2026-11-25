@@ -1047,7 +1047,7 @@ body {
   grid-template-areas: "video tube" "links links";
   column-gap: 64px;
   row-gap: 30px;
-  margin-top: 34px;
+  margin-top: 70px; /* leaves room above the video for the "watch this first" note */
   align-items: stretch;
 }
 .home .start-video { grid-area: video; position: relative; }
